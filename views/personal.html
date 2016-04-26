@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>personal</title>
+</head>
+<body>
+
+	<a href="/set">个人设置</a>
+	<a href="/">首页</a>
+	<a href=<%= '/personal/' + data.userId + '/publish' %>>发表</a>
+
+	<br />
+	<% for(var i=0;i<data.blogNum;i++){ %>
+	<a href=<%= '/personal/blog/'+data.userId+'/'+data.blog[i].blogId %>><%= data.blog[i].blogTitle %></a>&nbsp;<span><%= data.blog[i].blogType %></span><br />
+	<% } %>
+</body>
+</html>
