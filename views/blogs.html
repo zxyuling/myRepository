@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>blogs</title>
+</head>
+<body>
+	<h1><%= data.blogTitle %></h1>
+	<p><%= data.blogContent %></p>
+	<a href=<%= "/personal/"+data.blogAuthorId+"/update/"+data.blogId %>>修改</a><br/>
+	<% for(var i=0;i<data.commentaryNum;i++){ %>
+	<span><%= data.commentary[i].commentaryAuthorName %>:</span><a ><%= data.commentary[i].commentaryContent%></a><br />
+	<% } %>
+<form method="post">
+	<textarea name=commentaryContent></textarea>
+	<input type="submit">
+</form>
+</body>
+</html>
