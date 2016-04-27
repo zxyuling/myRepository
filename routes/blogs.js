@@ -8,7 +8,11 @@ router.get('/:userId/:blogId', function(req, res, next) //根目录路由
 {
 	var json = {
 				'blogAuthorId'	: 	req.params.userId,
+<<<<<<< HEAD
 				'blogId'	: 	req.params.blogId
+=======
+				'blogId'		: 	req.params.blogId
+>>>>>>> 13c988aba771aa17e1e5a34dc7a5ef9952cf38f6
 	}
 
 	var blogContentDel = new blogContent_del(json);

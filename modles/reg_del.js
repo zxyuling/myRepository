@@ -7,7 +7,10 @@ function reg_del(JSON)
 reg_del.prototype.reg=function(req,res,callback)
 {
 	var json=this.json;
+<<<<<<< HEAD
 	console.log("数据已获取："+json.userName);
+=======
+>>>>>>> 13c988aba771aa17e1e5a34dc7a5ef9952cf38f6
 	db.conn(con_del);
 	function con_del(err,db)
 	{		

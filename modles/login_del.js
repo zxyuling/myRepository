@@ -37,6 +37,10 @@ login_del.prototype.login=function(req,res,callback)
 					}
 					else
 					{
+<<<<<<< HEAD
+=======
+						console.log(json.passWord)
+>>>>>>> 13c988aba771aa17e1e5a34dc7a5ef9952cf38f6
 						if(doc)//匹配成功设置cookie
 						{
 							console.log('login_del:登录成功');

@@ -62,4 +62,8 @@ app.use(function(err, req, res, next) {
 });
 
 app.listen(80,function(){console.log('started');})
+<<<<<<< HEAD
+=======
+app.listen(3000);
+>>>>>>> 13c988aba771aa17e1e5a34dc7a5ef9952cf38f6
 module.exports = app;
