@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>hotel</title>
+</head>
+<body>
+	<% if(data.userId){ %>
+	<a href=<%= '/personal/'+data.userId %>><%= data.userId %></a>
+	<br />
+	<%= data.userName %>
+	<% } else{ %>
+	游客
+	<% } %>
+</body>
+</html>
