@@ -1,0 +1,16 @@
+.header
+{
+	background:url(/images/header.jpg);
+	height: 387px;
+	color:#474747;
+	font-size: 18px;
+	overflow: hidden;
+}
+.header-nav
+{
+	margin-top: 300px;
+	display: flex;
+	justify-content:space-around;
+	max-width: 660px;
+	padding: 0px 10px;
+}

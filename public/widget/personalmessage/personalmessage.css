@@ -1,0 +1,30 @@
+.personalmessage
+{
+	background:url(/images/moduleheader.jpg) #fff;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content:center;
+	position: relative;	
+	padding: 20px;
+	color:#474747;
+}
+.personalmessage-outline
+{
+	margin-top:100px;
+}
+.personalmessage-display
+{
+	width: 150px;
+	height: 150px;
+	background-color: black;
+	border-radius: 50%;
+	margin: 20px 0;
+}
+.personalmessage-title
+{
+	font-size: 24px;
+	position: absolute;
+	left: 90px;
+	margin-top:20px;
+}

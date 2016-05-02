@@ -1,0 +1,31 @@
+.search
+{
+	background-color: #fff;
+	background:url(/images/search.jpg);
+	background-repeat: no-repeat;
+	height: 120px;
+	overflow: hidden;
+	display: flex;
+	justify-content:center;
+	align-items:center;
+}
+.search>form
+{
+	display: flex;
+	align-items:center;
+}
+.search-go
+{
+	background-image: url("/images/go.gif");
+	width: 25px;
+	height: 25px;
+	outline:medium;
+	border: none;
+}
+.search-content
+{
+	width: 200px;
+	height: 18px;
+	margin: 0 5px;
+
+}

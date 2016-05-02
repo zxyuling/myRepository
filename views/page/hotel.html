@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="/stylesheets/hotel/hotel.css">
+	<title>blog</title>
+</head>
+<body>
+	<div class="left">
+		<%include ../widget/common/header/header.html%>
+		<%include ../widget/search/search.html%>
+		<%include ../widget/personalmessage/personalmessge.html%>
+		<%include ../widget/list/list.html%>
+	</div>
+	<div class="center">
+		<%include ../widget/common/header/header.html%>
+		<%include ../widget/search/search.html%>
+		<%include ../widget/personalmessage/personalmessge.html%>
+		<%include ../widget/list/list.html%>
+	</div>
+	<div class="right">
+		<%include ../widget/common/header/header.html%>
+		<%include ../widget/search/search.html%>
+		<%include ../widget/personalmessage/personalmessge.html%>
+		<%include ../widget/list/list.html%>
+	</div>
+	<script src="/javascripts/seajs/sea.js"></script>
+	<script>
+	  seajs.config(
+	  {
+	    base: "/javascripts",
+	  });
+		seajs.use("index/main")
+	</script>
+</body>
+</html>

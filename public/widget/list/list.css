@@ -1,0 +1,35 @@
+.list
+{
+	background:url(/images/moduleheader.jpg) #fff;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	position: relative;	
+	padding: 20px;
+	color:#474747;
+	min-height: 300px;
+}
+.list-title
+{
+	font-size: 24px;
+	position: absolute;
+	left: 90px;
+	margin-top:20px;
+}
+.list-blog-title
+{
+	float: left;
+	clear: both;
+}
+.list-blog-time
+{
+	float: right;
+	white-space: nowrap;
+}
+.list-content
+{
+	margin-top: 100px;
+}
+.list-index
+{
+	white-space: nowrap;
+}

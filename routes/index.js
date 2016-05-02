@@ -14,7 +14,7 @@ router.get('/', function(req, res, next) //根目录路由
 	if(req.cookies.userId)
 		res.redirect('/hotel');
 	else
-		res.render('index');
+		res.render('page/index');
 });
 
 
@@ -37,9 +37,9 @@ router.post('/:key', function(req, res, next) //reg.html页面路由
 		function regCallback(status,data)
 		{
 			if(status)
-			res.render('index');
+			res.render('page/index');
 			else
-			res.render('index'); 
+			res.render('page/index'); 
 		}
 	}
 	else								//执行登录操作
@@ -55,7 +55,7 @@ router.post('/:key', function(req, res, next) //reg.html页面路由
 			if(status)
 				res.redirect('/hotel');
 			else
-				res.render('index');  
+				res.render('page/index');  
 		}
 	}
 });
@@ -67,7 +67,7 @@ router.get('/hotel',function(req,res,next)
 	hotelDel.hotel(req,res,callback);
 	function callback(status,data)
 	{
-		res.render('hotel',{'data':data});
+		res.render('page/hotel',{'data':data});
 	}
 })
 
