@@ -1,7 +1,6 @@
 body
 {
 	font-family: "microsoft yahei";
-<<<<<<< HEAD
 	display: flex;
 	justify-content:center;
 	background:#153039;
@@ -27,6 +26,4 @@ body
 .right>div,.left>div,.center>div
 {
 	margin: 10px 0;
-=======
->>>>>>> e4eef0ef456dbe73a12cbedd5188dd79c32cc44d
 }
