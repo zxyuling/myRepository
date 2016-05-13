@@ -69,8 +69,16 @@ router.get('/hotel',function(req,res,next)
 	{
 		res.render('page/hotel',{'data':data});
 	}
-})
+});
 
 /*******************************************************************************/
-
+router.get('/logout',function(req,res,next)
+{
+	var logoutDel = new logout_del({});
+	logoutDel.logout(req,res,callback);
+	function callback(status,data)
+	{
+		res.redirect('/');
+	}
+});
 module.exports = router;

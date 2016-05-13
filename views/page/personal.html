@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="/stylesheets/personal/personal.css">
+	<title>blog</title>
+</head>
+<body>
+	<div class="left">
+	</div>
+	<div class="center">
+		<%include ../widget/common/header/header.html%>
+		<%if(edit==1){%>
+			<%include ../widget/personaledit/personaledit.html%>
+		<%}else{%>
+			<%include ../widget/personaldisplay/personaldisplay.html%>
+		<%}%>
+
+	</div>
+	<div class="right">
+	</div>
+	<script src="/javascripts/seajs/sea.js"></script>
+	<script>
+	  seajs.config(
+	  {
+	    base: "/javascripts",
+	  });
+		seajs.use("personaldisplay/main")
+	</script>
+<script charset="utf-8" src="/javascripts/kindeditor/kindeditor-all-min.js"></script>
+<script>
+        KindEditor.ready(function(K) {
+                window.editor = K.create('#editor_id');
+        });
+</script>
+<script src="/javascripts/jq/jq.js"></script>
+<script src="/javascripts/jq/jq.ex.js"></script>
+<script>
+
+</script>
+</body>
+</html>

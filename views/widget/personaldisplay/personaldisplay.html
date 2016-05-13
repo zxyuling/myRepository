@@ -1,0 +1,58 @@
+<div class="personaldisplay">
+	<h3 class="personaldisplay-title">个人信息</h3>
+	<div class="personaldisplay-content">
+		<form action="">
+			<div class="personaldisplay-display">
+				<input type="file" class="personaldisplay-file" id="file">
+			<label for="file" class="personaldisplay-file-label">点击图片上传头像</label>
+			<div><img id="ImgPr" src="http://www.atool.org/placeholder.png?size=150x150&bg=9BCE3B&fg=fff" alt="" class="personaldisplay-display-img"></div>
+			</div>
+			<input type="submit" value="保存" >
+		</form>
+		<div class="personaldisplay-username"><span>用户名:asdafaf</span><span class="personaldisplay-username-edit">修改</span></div>
+		
+		<form action="" class="personaldisplay-username-form">
+			<h6>用户名:</h6>
+			<input type="text" class="personaldisplay-input" placeholder="旧密码"><br>
+			<input type="submit" value="保存" class="personaldisplay-submit">
+		</form>
+
+		<div class="personaldisplay-username"><span>密码:&#42;&#42;&#42;&#42;&#42;&#42;</span><span class="personaldisplay-username-edit">修改</span></div>
+
+		<form action="" class="personaldisplay-username-form">
+			<h6>密码:</h6>
+			<input type="password" placeholder="旧密码" class="personaldisplay-input"><br>
+			<input type="password" placeholder="新密码" class="personaldisplay-input"><br>
+			<input type="password" placeholder="确认密码" class="personaldisplay-input"><br>
+			<input type="submit" value="保存" class="personaldisplay-submit">
+		</form>
+		<h6>用户资料</h6>
+		<a href="aa/edit" class="personaldisplay-a-edit"><span class="personaldisplay-username-edit">编辑</span></a>
+		<div class="personaldisplay-message">
+			<h2>基本资料</h2>
+			<ul>
+				<li>性别：<%= (typeof data.json.sex)!='undefine'&&data.json.sex!=-1?data.json.sex:''%></li>
+				<li>生日：<%= (typeof data.json.birth)!='undefine'&&data.json.birth!=-1?data.json.birth:''%></li>
+				<li>年龄：<%= (typeof data.json.age)!='undefine'&&data.json.age!=-1?data.json.age:''%></li>
+				<li>个性签名：<%= (typeof data.json.sign)!='undefine'&&data.json.sign!=-1?data.json.sign:''%></li>
+			</ul>
+			<h2>详细资料</h2>
+			<ul>
+				<li>血型：<%= (typeof data.json.bloodtype)!='undefine'&&data.json.bloodtype!=-1?data.json.bloodtype:''%></li>
+				<li>体形：<%= (typeof data.json.bodytype)!='undefine'&&data.json.bodytype!=-1?data.json.bodytype:''%></li>
+				<li>身高：<%= (typeof data.json.height)!='undefine'&&data.json.height!=-1?data.json.height:''%></li>
+				<li>婚姻状况：<%= (typeof data.json.married)!='undefine'&&data.json.married!=-1?data.json.married:''%></li>
+				<li>教育程度：<%= (typeof data.json.education)!='undefine'&&data.json.education!=-1?data.json.education:''%></li>
+				<li>毕业院校：<%= (typeof data.json.school)!='undefine'&&data.json.school!=-1?data.json.school:''%></li>
+				<li>职业：<%= (typeof data.json.job)!='undefine'&&data.json.job!=-1?data.json.job:''%></li>
+				<li>收入水平：<%= (typeof data.json.income)!='undefine'&&data.json.income!=-1?data.json.income:''%></li>
+				<li>所在地：<%= (typeof data.json.province)!='undefine'&&data.json.province!=-1?data.json.province:''%></li>
+				<li>通讯地址：<%= (typeof data.json.address)!='undefine'&&data.json.address!=-1?data.json.address:''%></li>
+				<li>QQ：<%= (typeof data.json.qq)!='undefine'&&data.json.qq!=-1?data.json.qq:''%></li>
+				<li>微博：<%= (typeof data.json.weibo)!='undefine'&&data.json.weibo!=-1?data.json.weibo:''%></li>
+				<li>手机号：<%= (typeof data.json.telephone)!='undefine'&&data.json.telephone!=-1?data.json.telephone:''%></li>
+				<li>兴趣爱好：<%= (typeof data.json.interset)!='undefine'&&data.json.interset!=-1?data.json.interset:''%></li>
+			</ul>
+		</div>
+	</div>
+</div>

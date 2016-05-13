@@ -1,0 +1,29 @@
+<div class="blogdisplay">
+	<h3 class="blogdisplay-title"><%= data.blogTitle %></h3>
+	<div class="blogdisplay-content">
+		<h1 class="blogdisplay-blog-title"><%= data.blogTitle %></h1>
+		<span class="blogdisplay-author">作者:<%= data.blogAuthorName%></span>
+		<a href=<%= "/personal/"+data.blogAuthorId+"/update/"+data.blogId %> class="blogdisplay-edit">编辑</a><br/>
+		<hr>
+		<div class="blogdisplay-blog-content"><div class="blogdisplay-author-message">
+			<%include ../personalmessage/personalmessage.html%></div><%- data.blogContent %>
+		</div>
+		<div class="blogdisplay-fenge">评论</div>
+		<% for(var i=0;i<data.commentaryNum;i++){ %>
+		<div class="blogdisplay-commentary-content">
+			<div class="blogdisplay-author-message">
+				<%include ../personalmessage/personalmessage.html%>
+			</div>
+			<span><%= data.commentary[i].commentaryContent%></span><br />
+			<div class="blogdisplay-floor"><%=i+1%>楼</div>
+		</div>
+		<hr>
+		<% } %>
+	</div>
+	<div class="blogdisplay-commentary">
+		<form method="post" >
+			<textarea id="editor_id_commentary" style="width:800px;height:250px" name=commentaryContent></textarea>
+			<input type="submit" class="blogdisplay-submit" value="发表">
+		</form>
+	</div>
+</div>

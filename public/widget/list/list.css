@@ -17,19 +17,17 @@
 }
 .list-blog-title
 {
-	float: left;
-	clear: both;
 }
 .list-blog-time
 {
-	float: right;
-	white-space: nowrap;
 }
 .list-content
 {
 	margin-top: 100px;
 }
-.list-index
+.list-blog-index
 {
+	overflow: hidden;
 	white-space: nowrap;
+	text-overflow:ellipsis;
 }

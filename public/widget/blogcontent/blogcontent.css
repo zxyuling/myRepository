@@ -1,0 +1,57 @@
+.blogcontent
+{
+	background:url(/images/moduleheader.jpg) #fff;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	position: relative;	
+	padding: 20px;
+	color:#474747;
+	min-height: 300px;
+}
+.blogcontent-title
+{
+	font-size: 24px;
+	position: absolute;
+	left: 90px;
+	margin-top:20px;
+}
+.blogcontent-content
+{
+	margin-top:100px;
+	display: flex;
+	justify-content:center;
+}
+.blogcontent-form>input
+{
+	margin: 20px 0;
+}
+.blogcontent-input-title
+{
+	width: 800px;
+	height: 36px;
+	margin: 12px 0;
+	font-size: 24px;
+	text-align: center;
+	outline:medium;
+	border: none;
+	border-bottom: 3px solid #555;
+	border-radius: 2px;
+	box-shadow: inset  0 0 0px 1000px #fff;
+}
+input.blogcontent-submit
+{
+	outline:medium;
+	border: none;
+	display: block;
+	background-color: #ddd;
+	width: 200px;
+	height: 48px;
+	font-family:"microsoft yahei";
+	font-size:20px;
+	border-radius: 5px;
+	margin: 20px auto 0 auto;
+}
+.blogcontent-submit:hover
+{
+	background-color: #aaa;
+}

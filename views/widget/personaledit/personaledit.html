@@ -1,0 +1,253 @@
+<div class="personaledit">
+	<h3 class="personaledit-title">个人信息</h3>
+	<div class="personaledit-content">
+
+		<form action="" method="post">
+		<h2>基本资料</h2>
+				<ul>
+					<li>
+						<label>性 别：</label>
+						<span>
+							<label>
+								<input value="男" name="sex" type="radio" <%= (typeof data.json.sex)!='undefine'&&data.json.sex!=-1&&data.json.sex=="男"? 'checked':''%>>
+								<span>男</span>
+							</label>
+							<label>
+								<input value="女" name="sex" type="radio" <%= (typeof data.json.sex)!='undefine'&&data.json.sex!=-1&&data.json.sex=="女"? 'checked':''%>>
+								<span>女</span>
+							</label>
+						</span>
+					</li>
+
+					<li>
+						<label>生 日：</label>
+						<input type="date" name="birth" value="<%= (typeof data.json.birth)!='undefine'&&data.json.birth!=-1? data.json.birth:''%>">							
+					</li>
+					<!--**************************************** 年龄 -->
+					<li>
+						<label>年 龄：</label>
+						<span>
+							<select class="select" name="age">
+								<option value="-1">请选择</option>
+								<%for(var i = 1;i<=100;i++){%>
+								<option value="<%=i%>" <%if(data.json.age==i){%>selected <%}%>><%=i%></option>
+								<%}%>
+							</select>
+						</span>
+					</li>
+					<li>
+						<label>个性签名：</label>
+							<textarea name="sign" maxlength="100" placeholder="不超过100个汉字（支持中英文、数字与标点）"><%= (typeof data.json.sign)!='undefine'&&data.json.sign!=-1?data.json.sign:''%></textarea>
+					</li>
+				</ul>
+		<h2>详细资料</h2>
+				<ul>
+					<li>
+						<label>血型：</label>
+						<span>
+							<select name="bloodtype">
+								<option value="-1">请选择</option>
+								<option value="A" <%if(data.json.bloodtype=='A'){%>selected <%}%>>A型</option>
+								<option value="B" <%if(data.json.bloodtype=='B'){%>selected <%}%>>B型</option>
+								<option value="O" <%if(data.json.bloodtype=='O'){%>selected <%}%>>O型</option>
+								<option value="AB" <%if(data.json.bloodtype=='AB'){%>selected <%}%>>AB型</option>
+							</select>
+						</span>
+					</li>
+					<li>
+						<label>体 型：</label>
+						<span class="v">
+							<select class="select input-l" name="bodytype">
+								<option value="-1">请选择</option>
+								<option value="匀称" <%if(data.json.bodytype=='匀称'){%>selected <%}%>>匀称</option>
+								<option value="标准" <%if(data.json.bodytype=='标准'){%>selected <%}%>>标准</option>
+								<option value="较瘦" <%if(data.json.bodytype=='较瘦'){%>selected <%}%>>较瘦</option>
+								<option value="较胖" <%if(data.json.bodytype=='较胖'){%>selected <%}%>>较胖</option>
+							</select>
+						</span>
+					</li>
+
+					<li class="fm-item">
+						<label class="k">身 高：</label>
+						<span class="v">
+							<input class="text input-l" name="height" maxlength="3" value="<%=data.json.height%>" type="text">cm
+							<span id="idHeight" class="text-error" style="display:none">
+								<em>请输入正确身高</em>
+							</span>
+						</span>
+					</li>
+
+					<li class="fm-item">
+						<label class="k">婚姻状况：</label>
+						<select class="select input-l" name="married">
+								<option value="-1">请选择</option>
+								<option value="单身" <%if(data.json.married=='单身'){%>selected <%}%>>单身</option>
+								<option value="已婚" <%if(data.json.married=='已婚'){%>selected <%}%>>已婚</option>
+								<option value="恋爱" <%if(data.json.married=='恋爱'){%>selected <%}%>>恋爱</option>
+								<option value="保密" <%if(data.json.married=='保密'){%>selected <%}%>>保密</option>
+						</select>
+					</li>
+
+					<li class="fm-item">
+						<label class="k">教育程度：</label>
+						<select class="select input-l" name="education">
+								<option value="-1">请选择</option>
+								<option value="初中/小学" <%if(data.json.education=='初中/小学'){%>selected <%}%>>初中/小学</option>
+								<option value="高中/中专" <%if(data.json.education=='高中/中专'){%>selected <%}%>>高中/中专</option>
+								<option value="本科/专科" <%if(data.json.education=='本科/专科'){%>selected <%}%>>本科/专科</option>
+								<option value="研究生以上" <%if(data.json.education=='研究生以上'){%>selected <%}%>>研究生以上</option>
+							</select>
+					</li>
+
+					<li class="fm-item">
+						<label class="k">毕业院校：</label>
+						<span class="v">
+							<input class="text input-xl" name="school" maxlength="100" placeholder="不超过100字" value="<%=data.json.school%>" type="text">
+							<span id="idSchool" class="text-error" style="display:none">
+								<em>请填写正确的学校</em>
+							</span>
+						</span>
+					</li>
+
+					<li class="fm-item">
+						<label class="k">职 业：</label>
+						<select class="select input-l" name="job">
+								<option value="-1">请选择</option>
+								<option value="学生" <%if(data.json.education=='学生'){%>selected <%}%>>学生</option>
+								<option value="政府机关/干部" <%if(data.json.education=='政府机关/干部'){%>selected <%}%>>政府机关/干部</option>
+								<option value="邮电通信" <%if(data.json.education=='邮电通信'){%>selected <%}%>>邮电通信</option>
+								<option value="计算机" <%if(data.json.education=='计算机'){%>selected <%}%>>计算机</option>
+								<option value="网络" <%if(data.json.education=='网络'){%>selected <%}%>>网络</option>
+							<option value="商业贸易" <%if(data.json.education=='商业贸易'){%>selected <%}%>>商业贸易</option>
+							<option value="银行/金融/证券/保险" <%if(data.json.education=='银行/金融/证券/保险'){%>selected <%}%>>银行/金融/证券/保险</option>
+							<option value="税务" <%if(data.json.education=='税务'){%>selected <%}%>>税务</option>
+							<option value="咨询" <%if(data.json.education=='咨询'){%>selected <%}%>>咨询</option>
+							<option value="社会服务" <%if(data.json.education=='社会服务'){%>selected <%}%>>社会服务</option>
+							<option value="旅游/饭店" <%if(data.json.education=='旅游/饭店'){%>selected <%}%>>旅游/饭店</option>
+							<option value="健康/医疗" <%if(data.json.education=='健康/医疗'){%>selected <%}%>>健康/医疗</option>
+							<option value="房地产" <%if(data.json.education=='房地产'){%>selected <%}%>>房地产</option>
+							<option value="交通运输" <%if(data.json.education=='交通运输'){%>selected <%}%>>交通运输</option>
+							<option value="法律" <%if(data.json.education=='法律'){%>selected <%}%>>法律</option>
+							<option value="文化/娱乐" <%if(data.json.education=='文化/娱乐'){%>selected <%}%>>文化/娱乐</option>
+							<option value="媒介/广告" <%if(data.json.education=='媒介/广告'){%>selected <%}%>>媒介/广告</option>
+							<option value="农业/渔业/林业/畜牧业" <%if(data.json.education=='农业/渔业/林业/畜牧业'){%>selected <%}%>>农业/渔业/林业/畜牧业</option>
+							<option value="矿业" <%if(data.json.education=='矿业'){%>selected <%}%>>矿业</option>
+							<option value="自由职业" <%if(data.json.education=='自由职业'){%>selected <%}%>>自由职业</option>
+							<option value="其他" <%if(data.json.education=='其他'){%>selected <%}%>>其他</option>
+							</select>
+					</li>
+
+					<li class="fm-item">
+						<label class="k">收入水平：</label>
+						<select class="select input-l" name="income">
+								<option value="-1">请选择</option>
+								<option value="3000以下" <%if(data.json.education=='3000以下'){%>selected <%}%>>3000以下</option>
+								<option value="3001-6000" <%if(data.json.education=='3001-6000'){%>selected <%}%>>3001-6000</option>
+								<option value="6001-10000" <%if(data.json.education=='6001-10000'){%>selected <%}%>>6001-10000</option>
+								<option value="10000以上" <%if(data.json.education=='10000以上'){%>selected <%}%>>10000以上</option>
+						</select>
+					</li>
+
+					<li class="fm-item">
+						<label class="k">所在地：</label>
+							<span class="v">
+							<input class="text input-xl" name="province" maxlength="100" placeholder="不超过100字" value="<%=data.json.province%>" type="text">
+						</span>
+												
+					</li>
+
+					<li class="fm-item">
+						<label class="k">通讯地址：</label>
+						<span class="v">
+							<input class="text input-xl" name="address" maxlength="100" placeholder="不超过100字" value="<%=data.json.address%>" type="text">
+							<span id="idAddress" class="text-error" style="display:none">
+								<em>请填写正确的地址</em>
+							</span>
+						</span>
+					</li>
+
+					<li class="fm-item">
+						<label class="k">Q Q：</label>
+						<span class="v">
+							<input class="text input-xl" name="qq" maxlength="20" placeholder="请输入QQ" value="<%=data.json.qq%>" type="text">
+							<span id="idQQ" class="text-error" style="display:none">
+								<em>请填写正确的QQ</em>
+							</span>
+						</span>
+					</li>
+
+					<li class="fm-item">
+						<label class="k">微 博：</label>
+						<span class="v">
+							<input class="text input-xl" name="weibo" maxlength="100" placeholder="不超过100字" value="<%=data.json.weibo%>" type="text">
+							<span id="idWeibo" class="text-error" style="display:none">
+								<em>请填写正确的微博</em>
+							</span>
+						</span>
+					</li>
+
+					<li class="fm-item">
+						<label class="k">手机号：</label>
+						<span class="v">
+							<input class="text input-xl" name="telephone" maxlength="11" placeholder="请输入手机号" value="<%=data.json.telephone%>" type="text">
+							<span id="idTelephone" class="text-error" style="display:none">
+								<em>请填写正确的手机号</em>
+							</span>
+						</span>
+					</li>
+
+					<li class="fm-item">
+						<label class="k">兴趣爱好：</label>
+						<span class="v">
+							<p class="hobby-cont">
+								<label class="item hobby-item" for="cbox_1">
+									<input id="cbox_1" name="interset" value="财经股市" type="checkbox" <%if(data.json.interset=='财经股市'){%>checked <%}%>>
+									财经股市
+								</label>
+								<label class="item hobby-item" for="cbox_2">
+									<input id="cbox_2" name="interset" value="房产家居" type="checkbox" <%if(data.json.interset=='房产家居'){%>checked <%}%>>
+									房产家居
+								</label>
+								<label class="item hobby-item" for="cbox_3">
+									<input id="cbox_3" name="interset" value="图书" type="checkbox"<%if(data.json.interset=='图书'){%>checked <%}%>>
+									图书
+								</label>
+								<label class="item hobby-item" for="cbox_4">
+									<input id="cbox_4" name="interset" value="娱乐" type="checkbox" <%if(data.json.interset=='娱乐'){%>checked <%}%>>
+									娱乐
+								</label>
+								<label class="item hobby-item" for="cbox_5">
+									<input id="cbox_5" name="interset" value="旅游" type="checkbox" <%if(data.json.interset=='旅游'){%>checked <%}%>>
+									旅游
+								</label>
+							</p>
+							<p class="hobby-cont">
+								<label class="item hobby-item" for="cbox_6">
+									<input id="cbox_6" name="interset" value="体育" type="checkbox" <%if(data.json.interset=='体育'){%>checked <%}%>>
+									体育
+								</label>
+								<label class="item hobby-item" for="cbox_7">
+									<input id="cbox_7" name="interset" value="汽车" type="checkbox" <%if(data.json.interset=='汽车'){%>checked <%}%>>
+									汽车
+								</label>
+								<label class="item hobby-item" for="cbox_8">
+									<input id="cbox_8" name="interset" value="游戏聊天" type="checkbox" <%if(data.json.interset=='游戏聊天'){%>checked <%}%>>
+									游戏聊天
+								</label>
+								<label class="item hobby-item" for="cbox_9">
+									<input id="cbox_9" name="interset" value="IT数码" type="checkbox" <%if(data.json.interset=='IT数码'){%>checked <%}%>>
+									IT数码
+								</label>
+								<label class="item hobby-item" for="cbox_10">
+									<input id="cbox_10" name="interset" value="购物" type="checkbox" <%if(data.json.interset=='购物'){%>checked <%}%>>
+									购物
+								</label>
+							</p>
+						</span>
+					</li>
+				</ul>
+				<input type="submit" value="保存" class="personaledit-input">
+				<input type="reset" value="取消" class="personaledit-input">
+		</form>
+	</div>
+</div>

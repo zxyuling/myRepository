@@ -35,6 +35,7 @@ blogContent_del.prototype.blogContent=function(req,res,callback)
 				}
 				data.blogId = json.blogId;
 				data.blogAuthorId = json.blogAuthorId;
+				data.blogAuthorName = doc.blogAuthorName;
 				data.blogContent = doc.blogContent;
 				data.blogTitle = doc.blogTitle;
 				if(doc.commentaryNum)

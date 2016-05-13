@@ -42,6 +42,7 @@ login_del.prototype.login=function(req,res,callback)
 							console.log('login_del:登录成功');
 							res.cookie('userId', doc.userId);//设置cookie
 							res.cookie('userName',doc.userName);
+							res.cookie('password',doc.passWord);
 							callback(true,{});
 						}
 						else

@@ -16,7 +16,7 @@ router.get('/:userId/:blogId', function(req, res, next) //根目录路由
 	function callback(status,data)
 	{
 		console.log(data);
-		res.render('blogs',{'data':data});
+		res.render('page/blogs',{'data':data});
 
 	}
 });

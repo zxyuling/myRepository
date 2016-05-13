@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="/stylesheets/blogs/blogs.css">
+	<title>blog</title>
+</head>
+<body>
+	<div class="left">
+	</div>
+	<div class="center">
+		<%include ../widget/common/header/header.html%>
+		<%include ../widget/blogdisplay/blogdisplay.html%>
+	</div>
+	<div class="right">
+	</div>
+	<script src="/javascripts/seajs/sea.js"></script>
+	<script>
+	  seajs.config(
+	  {
+	    base: "/javascripts",
+	  });
+		seajs.use("index/main")
+	</script>
+<script charset="utf-8" src="/javascripts/kindeditor/kindeditor-all-min.js"></script>
+<script>
+        KindEditor.ready(function(K) {
+                window.editor = K.create('#editor_id_commentary');
+        });
+</script>
+</body>
+</html>
