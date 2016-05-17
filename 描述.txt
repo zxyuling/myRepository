@@ -14,6 +14,7 @@ document=
 
 }
 blog表:
+blog=
 {
 	blogId:'blogid',
 	blogAuthor:'blogAuthor'
@@ -21,8 +22,10 @@ blog表:
 	blogContent:'blogcontent',
 	blogType:'blogtype',
 	blogVisit:'blogvisit',
-	commentaryNum:'blogCommentaryNum',
+	commentaryNum:'blogCommentaryNum'
+}
 commentary表：
+commentary=
 			{ 	
 				blogAuthorId:'blogAuthorId',
 				blogId:'blogId',
@@ -31,9 +34,40 @@ commentary表：
 				commentaryAuthorName:'commentaryauthorname',
 				commentaryContent:'commentaryContent',
 			},
-setting表
+personal=
 {
-	待定
+	userId:userId,
+	sex:sex,
+	birth:birth,
+	age:age,
+	sign:sign,
+	bloodtype:bloodtype,
+	bodytype:bodytype,
+	height:height,
+	married:married,
+	education:education,
+	school:school,
+	job:job,
+	income:income,
+	province:province,
+	address:address,
+	qq:qq,
+	weibo:weibo,
+	telephone:telephone,
+	interset:interset
+}
+setting表
+setting=
+{
+	userId:userId,
+	design:design,
+	skin:skin,
+	position:
+	{
+		left:[div1,div2],
+		center:[div3,div4],
+		right:[div5,div6]
+	}
 }
 
 
